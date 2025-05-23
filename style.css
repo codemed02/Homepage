@@ -18,7 +18,8 @@ body{
 header{
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: right;
+    gap: 20px;
     padding: 2rem;
     padding-bottom: 2rem;
 }
@@ -86,30 +87,74 @@ main h1{
     background-clip: text;
 }
 
+.about-me{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    line-height: 1;
+    background-image: linear-gradient(rgb(133, 133, 133),
+    rgb(255, 255, 255));
+    color: transparent;
+    background-clip: text;
+}
+
+.projects{
+    margin-top: 7.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    line-height: 1;
+    background-image: linear-gradient(rgb(133, 133, 133),
+    rgb(255, 255, 255));
+    color: transparent;
+    background-clip: text;
+}
+
+.project-text{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    color: white;
+    max-width: 50rem;
+}
+
+.Hangman{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    color: white;
+    max-width: 50rem;
+}
+
 .location{
     margin-top: 2rem;
     display: flex;
     flex-direction: column;
-    align-items: flex-start
-}
-
-.location p{
+    align-items: flex-start;
+    font-weight: 500;
     background-image: linear-gradient(to bottom, red, white, red);
     color: transparent;
     background-clip: text;
     font-size: 1.5rem;
 }
 
+
 .bio-section{
     margin-top: auto;
     margin-bottom: 2rem;
+    margin-top: 1rem;
 
 }
 
 .bio{
     font-size: 1rem;
     line-height: 1.6;
-    font-weight: 300;
+    font-weight: 400;
     letter-spacing: 1px;
     max-width: 22rem;
 }
@@ -158,10 +203,79 @@ main h1{
     }
 }
 
-.planet-3d{
+/* ABOUT ME SECTION */
+.about-section{
+    width: 100%;
+    margin-top: 20rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-title{
+    margin-bottom: 5%;
+    font-size: 5rem;
+    background-image: linear-gradient(rgb(133, 133, 133),
+    rgb(255, 255, 255));
+    color: transparent;
+    background-clip: text;
+}
+
+.bento-grid{
+    position: relative;
+    display: grid;
+    height: 90vh;
+    width: 90%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+    "intro intro tech"
+    "time passion tech"
+    ;
+    gap: 1.5rem;
+
+}
+
+.card{
+    background: linear-gradient(145deg, rgba(0, 0, 0, 014), rgba(0, 0, 0, 0.07));
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    padding: 2rem;
+    transition: transform 0.3s ease,
+                border-color 0.3s ease;
+                box-shadow: 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* card specific areas */
+
+.intro{grid-area: intro; min-height: 300px;}
+.tech{grid-area: tech; min-height: 450px;}
+.time{grid-area: time; min-height: 220px;}
+.passion{grid-area: passion; min-height: 220px;}
+
+/* hover effect */
+.card:hover{
+    border-color: transparent;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transform: translateY(-5px);
+}
+
+/* spotlight effect */
+.card::before{
+    content: '';
     position: absolute;
-    top : 20%;
-    right: 14%;
-    width: 130%;
-    height: 130%;
+    inset: 0 0 0 0;
+    background: radial-gradient(circle at var(--x) var(--y),
+    rgba(124, 233, 230, 0.1),
+    transparent 40%);
+
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+}
+
+.card:hover::before{
+    opacity: 1;
 }
