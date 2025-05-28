@@ -6,6 +6,7 @@ body{
         filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1d2829",endColorstr="#1d2829",GradientType=1);
         color: white;
         padding: 3rem;
+        position: relative;
     }
 
 *{
@@ -22,42 +23,6 @@ header{
     gap: 20px;
     padding: 2rem;
     padding-bottom: 2rem;
-}
-
-.logo{
-    font-size: 1.5rem;
-    font-weight: 300;
-    letter-spacing: 2px;
-    justify-content: left;
-}
-
-.contact-btn{
-    padding: 0.5rem 2rem;
-    font-size: 1rem;
-    background-color: rgba(143, 143, 143, 0.2);
-    border: 1px solid rgba(102, 102, 102, 0.5);
-    border-radius: 50px;
-    cursor: pointer;
-    color: white;
-    transition: 0.3s;
-}
-
-.contact-btn:hover{
-    background-color: rgba(143, 143, 143, 0.5);
-}
-
-.projects-btn{
-    padding: 0.5rem 2rem;
-    font-size: 1rem;
-    background-color: rgba(143, 143, 143, 0.2);
-    border: 1px solid rgba(102, 102, 102, 0.5);
-    border-radius: 50px;
-    cursor: pointer;
-    color: white;
-    transition: 0.3s;
-}
-.projects-btn:hover{
-    background-color: rgba(143, 143, 143, 0.5);
 }
 
 
@@ -85,50 +50,6 @@ main h1{
     rgb(255, 255, 255));
     color: transparent;
     background-clip: text;
-}
-
-.about-me{
-    margin-top: 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 1.2rem;
-    font-weight: 400;
-    letter-spacing: 1px;
-    line-height: 1;
-    background-image: linear-gradient(rgb(133, 133, 133),
-    rgb(255, 255, 255));
-    color: transparent;
-    background-clip: text;
-}
-
-.projects{
-    margin-top: 7.5rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 1.2rem;
-    font-weight: 400;
-    letter-spacing: 1px;
-    line-height: 1;
-    background-image: linear-gradient(rgb(133, 133, 133),
-    rgb(255, 255, 255));
-    color: transparent;
-    background-clip: text;
-}
-
-.project-text{
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    color: white;
-    max-width: 50rem;
-}
-
-.Hangman{
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    color: white;
-    max-width: 50rem;
 }
 
 .location{
@@ -162,8 +83,8 @@ main h1{
 .scroll-down{
     height : 5rem;
     width: 2rem;
-    position: absolute;
-    right: 2%;
+    position: relative;
+    left: 97%;
     bottom: 5%;
     border-radius: 50px;
     cursor: pointer;
@@ -214,7 +135,7 @@ main h1{
 }
 
 .about-title{
-    margin-bottom: 5%;
+    margin-bottom: 2%;
     font-size: 5rem;
     background-image: linear-gradient(rgb(133, 133, 133),
     rgb(255, 255, 255));
@@ -283,27 +204,40 @@ main h1{
 .card-title{
     font-size: 2rem;
     font-weight: 500;
-    margin-top: 4rem;
+    margin-top: 2rem;
     color: white;
 }
 
 .card-text{
-    color: 7b7b7b;
+    color: #7b7b7b;
     line-height: 1.6;
     margin-top: 2rem;
     max-width: 20rem;
     font-size: 0.75rem;
 }
 
-.background-imagine{
+.card-title-time{
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-top: 2rem;
+    color: white;
+}
+
+.card-text-time{
+    color: #7b7b7b;
+    line-height: 1.6;
+    margin-top: 2rem;
+    max-width: 20rem;
+    font-size: 0.75rem;
+}
+
+.bento-grid .background-imagine{
     position: absolute;
-    top: 0;
-    left: 0;
+    inset: -1% -1% -1% -1%;
     width: 110%;
     height: 110%;
-    background-size: cover;
-    background-position: center;
-    opacity: 1;
+    object-fit: cover;
+    z-index: -1;
     
 }
 
@@ -315,11 +249,251 @@ main h1{
     height: 110%;
     background-size: cover;
     background-position: center;
-    opacity: 1;
-}
-
-.card-title-time{
-   font-size: 2rem;
+    z-index: -1;
 }
 
 
+
+
+
+.bento-grid .btn{
+    position: absolute;
+    bottom: 10%;
+    padding: 0.75rem 1.5rem;
+    background-color: rgba(124, 233, 230, 0.1);
+    color : #76b0ab;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s ease;
+
+}
+
+.bento-grid .btn:hover{
+    background-color: #76b0ab;
+    color: black;
+}
+
+.contact-section{
+    padding: 60px 0;
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+    
+    
+}
+
+.Section-header{
+    text-align: center;
+    margin-bottom: 40px;
+ 
+}
+
+.Section-header h3{
+    font-size: 5rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    background-image: linear-gradient(rgb(133, 133, 133),
+    rgb(255, 255, 255));
+    color: transparent;
+    background-clip: text;
+}
+
+.Section-header p{
+    color: lightgray;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Contact grid */
+.contact-grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+.info-card{
+    background-color: #1e1e1e;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+
+}
+
+.info-card:hover{
+    transform: translateY(-5px);
+}
+.info-card{
+    padding: 30px;
+}
+
+.info-card h3{
+    font-size: 1.5rem;
+    margin-bottom: 4rem;
+    color: lightgray;
+}
+
+.contact-item{
+    margin-bottom: 3rem;
+
+}
+
+.contact-item p{
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+    color: #7ce9e6;
+}
+
+.contact-item a{
+    color: lightgray;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contact-item a:hover{
+    color: #7ce9e6;
+}
+
+.social-link{
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #333;
+}
+
+.social-link p{
+    margin-bottom: 15px;
+    color: #7ce9e6;
+    font-weight: 600;
+}
+
+.social-link a{
+    display: inline-block;
+    margin-right: 15px;
+    color: lightgray;
+    text-decoration: none;
+    padding: 8px 15px;
+    background-color: #2d2d2d;
+    border-radius: 6px;
+    transition: all 0.2s;
+}
+
+.social-link a:hover{
+    background-color: #7ce9e6;
+    color: black;
+}
+
+.form-group{
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #333;
+}
+
+.form-control{
+    width: 100%;
+    padding: 12px 15px;
+    background-color: #2d2d2d;
+    border-radius: 8px;
+    color: lightgray ;
+    font-size: 16px;
+    transition: border-color 0.3s;
+    border: 1px solid #333;
+}
+.form-control:focus{
+    color: #7ce9e6;
+    outline: none;
+}
+
+textarea.form-control{
+    height: 120px;
+    resize: vertical;
+}
+
+.message-btn{
+   width: 100%;
+   padding: 12px;
+   background-color: rgba(124, 233, 230, 0.1);
+   color: #7ce9e6;
+   border: none;
+   border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+}
+
+.message-btn:hover{
+    background-color: #7ce9e6;
+    color: black;
+}
+
+.succes-message{
+    background-color: rgba(16, 185, 129, 0.2);
+    color: #10b981;
+    padding: 12px;
+    border-radius: 8px;
+    margin-top: 20px;
+    display: none;
+}
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    padding: 2rem 4rem;
+    background-color: rgba(124, 233, 230, 0.1);
+
+}
+
+.box-icons{
+    display: flex;
+    gap: 2rem;
+}
+
+.box-icons a{
+    color: lightgrey;
+    font-size: 2rem;
+    transition: color 0.5s;
+}
+
+.box-icons a:hover{
+    color: #7ce9e6;
+}
+
+@media (max-width: 1400px){
+    main h1{
+        font-size: 6.3rem;
+        letter-spacing: 0;
+
+    }
+
+    .bento-grid{
+        position: relative;
+        display: grid;
+        height: 80vh;
+    }
+
+    .card-title{
+        font-size: 1.2rem;
+        margin-top: 0;
+    }
+
+    .card-text{
+        font-size: 0.8rem;
+        line-height: 1.3;
+    }
+
+    .model-box{
+        right: 20%;
+        top: 10%;
+    }
+
+    .intro{min-height: 700px;}
+    .time{grid-area: time; min-height: 300px;}
+
+}
+
+@

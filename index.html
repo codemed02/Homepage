@@ -5,18 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Codemeds-Story</title>
     <link rel="stylesheet" href="style.css" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   </head>
   <body>
-    <header>
-      <div class="logo">Codemed</div>
-      <button class="contact-btn">Contact</button>
-      <button
-        onclick="document.getElementById('projects').scrollIntoView({ behavior: 'smooth' });"
-        class="projects-btn"
-      >
-        Projects
-      </button>
-    </header>
     <main>
       <div class=""title-section">
       <h1>WEB DEVELOPER</h1>
@@ -34,12 +25,12 @@
         </p>
       </div>
 
-      <div class="scroll-down"></div>
-
       
     </main>
 
-  <sectio class="about-section">
+    <div class="scroll-down"></div>
+
+  <section class="about-section">
     <h1 class="about-title">ABOUT ME</h1>
     <div class="bento-grid">
       <div class="card intro">
@@ -70,8 +61,14 @@
           technologies like Node.js and Express. I am always eager to learn new
           technologies and improve my skills.
         </p>
+
+        <button class="btn"><i class='bx bx-send'></i>CONTACT ME</button>
+
         <img src="images/skills group.png" alt="" class="background-imagine2">
-       <img src="images/gradient.png" alt="" class="background-imagine">
+       
+        <img src="images/gradient.png" alt="" class="background-imagine">
+
+       
       </div>
       
     
@@ -88,8 +85,8 @@
       
       <div class="card passion">
         <h2 class="card-title-time">PASSION FOR CODING</h2>
-        <p class="card-text-passion">Solving problems and building solutions through
-          code. Programming is my prrofession-it's my passion. I enjoy exploring
+        <p class="card-text-time">Solving problems and building solutions through
+          code. Programming is my profession-it's my passion. I enjoy exploring
           new technologies and enhancing my skills.
         </p>
         <img src="images/gradient3&4.png" alt="" class="background-imagine">
@@ -97,9 +94,95 @@
 
 
       
-  </sectio>
+  </section>
 
-  <script src="app.js"></script>
+  
 
+  <section class="contact-section">
+    <div class="Section-header">
+      <h3>Get In Touch</h3>
+      <p>Have a project in mind or just want to say hello? Drop a message!</p>
+    </div>
+
+
+    <div class="contact-grid">
+      <div class="info-card">
+        <h3>Contact Info</h3>
+
+        <div class="contact-item">
+          <p>Email</p>
+          <a href="#">ahmed.softic27@gmail.com</a>
+       </div>
+
+       <div class="contact-item">
+          <p>Phone</p>
+          <a href="#">+43 676 </a>
+       </div>
+
+       <div class="contact-item">
+          <p>Location</p>
+          <a href="#">Vienna, AUT</a>
+       </div>
+
+       <div class="social-link">
+        <p>Contact me</p>
+        <a href="https://github.com/codemed02">Github</a>
+        <a href="https://www.linkedin.com">Linkedin</a>
+        <a href="https://x.com">Twitter</a>
+       </div>
+
+    </div>
+       <div class="info-card">
+        <div class="info-card-content">
+          <h3>Send Message</h3>
+
+          <form id="contactForm">
+
+            <div class="form-group">
+              <input type="text" id="name" name="name" placeholder="Your Name" 
+              required class="form-control" />
+            </div>
+
+            <div class="form-group">
+              <input type="email" id="email" name="email" placeholder="Your Email" 
+              required class="form-control" />
+            </div>
+
+            <div class="form-group">
+              <input type="text" id="subject" name="subject" placeholder="subject" 
+              required class="form-control" />
+            </div>
+
+            <div class="form-group">
+              <textarea name="message" id="message" placeholder="Your Message"
+              required class="form-control"></textarea>
+            </div>
+
+            <button type="submit" id="submitBtn" class="message-btn">Send Message</button>
+
+            <div class="succes-message" id="succesMessage">
+              Message sent successfully! I'll get back to you soon.
+            </div>
+
+          </form>
+        </div>
+       </div>
+
+      </div>
+    </div>
+ 
+  </section>
+
+  <footer class="footer">
+    <h3>© 2025 Ahmed</h3>
+    <div class="box-icons">
+      <a href="#"><i class='bx bxl-github'></i></a>
+      <a href="#"><i class='bx bxl-twitter'></i></i></a>
+      <a href="#"></a>
+    </div>
+  </footer>
+
+
+<script src="app.js"></script>
   </body>
 </html>

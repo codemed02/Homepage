@@ -6,3 +6,15 @@ document.querySelectorAll('.card').forEach(card => {
         card.style.setProperty('--y', `${e.clientY - rect.top}px`);
     })
 });
+
+document.getElementById('contactForm').addEventListener('submit', function(e){
+    e.preventDefault();
+
+    document.getElementById('succesMessage').style.display = 'block';
+
+    this.reset();
+
+    setTimeout(function(){
+        document.getElementById('succesMessage').style.display = 'none';
+    }, 5000);
+})
