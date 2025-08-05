@@ -496,4 +496,9 @@ textarea.form-control{
 
 }
 
-@
+.footer-text{
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+    margin-left: auto;
+}
